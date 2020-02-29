@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top 10 reddit moments</title>
+    <base href="https://jack5079.tk/">
+    <link rel="stylesheet" href="/jack.css/jack.css">
+    <style>
+      button {
+        position: fixed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Top 10 Reddit Moments</h1>
+    <p>Today we will tell you some Reddit moments</p>
+    <h2>10: r/dankmemes</h2>
+    <p>big chungus</p>
+    <h2>9: r/dogelore</h2>
+    <p>little bro 100</p>
+    <h2>8: r/wholesomememes</h2>
+    <p>wholesome 100</p>
+    <h2>7: r/assholedesign</h2>
+    <p>middle finger emoji sticker</p>
+    <h2>6: r/baduibattles</h2>
+    <p>hahaa get it this is a b ad ui post</p>
+    <h2>5: r/programmerhumor</h2>
+    <p>lol array start at 1 how</p>
+    <h2>4: r/programminghorror</h2>
+    <p>oh god oh fuck</p>
+    <script>
+      function button(butt) {
+        butt.addEventListener('click', () => {
+          navigator.share({
+            url: location.href,
+            text: 'go to this site',
+            title: document.title
+          })
+        })
+
+        window.addEventListener('mousemove', e => {
+          butt.style.left = (e.clientX + (Math.random() * (window.innerWidth / 5))) - ((window.innerWidth / 5) / 2) + 'px'
+          butt.style.top = (e.clientY + (Math.random() * (window.innerHeight / 5))) - ((window.innerHeight / 5) / 2) + 'px'
+        })
+      }
+
+      window.addEventListener('mousemove', e => {
+        if (document.querySelectorAll('button').length < 1000) {
+          const b = document.createElement('button')
+          document.body.append(b)
+          b.innerText = 'SHARE'
+          button(b)
+          b.style.left = (e.clientX + (Math.random() * 500)) - 250 + 'px'
+          b.style.top = (e.clientY + (Math.random() * 500)) - 250 + 'px'
+        }
+      })
+    </script>
+  </body>
+
+</html>
